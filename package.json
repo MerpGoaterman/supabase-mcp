@@ -7,8 +7,8 @@
     "dev": "vercel dev"
   },
   "dependencies": {
-    "@supabase/mcp-server-supabase": "^0.4.5",
-    "@supabase/mcp-utils": "^0.4.5"
+    "@supabase/mcp-server-supabase": "file:packages/mcp-server-supabase",
+    "@supabase/mcp-utils": "file:packages/mcp-utils"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
