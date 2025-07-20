@@ -1,19 +1,10 @@
 {
-  "workspaces": ["packages/*"],
-  "scripts": {
-    "start": "node ./src/index.js",
-    "build": "npm run build --workspace @supabase/mcp-utils --workspace @supabase/mcp-server-supabase",
-    "test": "npm run test --workspace @supabase/mcp-utils --workspace @supabase/mcp-server-supabase",
-    "test:coverage": "npm run test:coverage --workspace @supabase/mcp-server-supabase",
-    "format": "biome check --write .",
-    "format:check": "biome check ."
-  },
-  "dependencies": {
-    "@supabase/mcp-server-supabase": "^0.4.5",
-    "@supabase/mcp-utils": "^0.4.5"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "supabase": "^2.1.1"
-  }
+  "version": 2,
+  "builds": [
+    { "src": "api/index.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "api/index.js" }
+  ]
+}
 

@@ -1,10 +1,17 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "src/index.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "src/index.js" }
-  ]
+  "name": "mcp-supabase",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@supabase/mcp-server-supabase": "^0.4.5",
+    "@supabase/mcp-utils": "^0.4.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "supabase": "^2.1.1"
+  }
 }
-
